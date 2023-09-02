@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid rgba(0, 0, 0, 0.487);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="\images\Front_img.png" alt="Front_img" width="100%" height="500">
+    <h1>Welcome to Flight Booking!</h1>
+    <label for="search-box"></label>
+    <form id="search-form">
+        <input type="text" id="search-box" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <!-- Search -->
+    <!-- QUICK Links -->
+    <div>
+        <h4>Quick Links </u>
+        </h4>
+        <ul>
+            <li><a href="#search-box">Search</a></li>
+            <li><a href="#ReviewerName">Submit Your Feedback</a></li>
+            <li><a href="#PopDestination">Popular Destination</a></li>
+            <li><a href="#FAQ's">FAQ'S</a></li>
+        </ul>
+    </div>
+
+    <!-- Start Flight Section -->
+    <h1>Book Your Flight</h1>
+    <form action="#">
+        <label for="Destination">Find and Book
+            Flights</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="destination" id="Destination" required>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Paris">Paris</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Palestine">Palestine</option>
+        </select>
+
+        <div><br>
+            <label for="Departure">Please Select Departure Date:</label>
+            <input type="date" id="Departure" name="DeptDate" required>
+        </div>
+        <div><br>
+            <label for="Arrival">Please Select Arrival Date:</label>&nbsp; &nbsp;&nbsp;&nbsp;
+            <input type="date" id="Arrival" name="ArrivalDate" required>
+        </div>
+
+        <div><br>
+            <label for="No.of.Passengers">Number of
+                Passengers:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" id="No.of.Passengers" name="No.of.Passengers" required>
+        </div>
+
+        <div><br>
+            <label for="range"> Price
+                Range:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;
+            <input type="range" id="range" name="pRange" min="1000" max="5000">
+        </div>
+        <div><br>
+            <label for="class">Select Class</label>
+            <select name="class" id="class" name="class">
+                <option value="Economy Class">Economy Class</option>
+                <option value="Premium Economy Class">Premium Economy Class</option>
+                <option value="Business Class" selected>Business Class</option>
+                <option value="First Class">First Class</option>
+            </select>
+        </div>
+    </form><br>
+    <table>
+        <thead>
+            <th>Flight Number</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>345A02</td>
+                <td>4:00</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>345A03</td>
+                <td>5:00</td>
+                <td>9:00</td>
+            </tr>
+            <tr>
+                <td>345A04</td>
+                <td>2:00</td>
+                <td>7:00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Time Table End -->
+
+    <!-- Customer Reviews Section -->
+    <h1>Customer Reviews</h1>
+    <table width="auto-fit" height="auto-fit">
+        <!-- Review 1 -->
+        <tbody>
+            <td>
+                <div>
+                    <h3>John Doe</h3>
+                    <div class="stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Displays stars -->
+                        <hr color="#ccc">
+                        <p>Great experience! Booking was easy, Will definitely use
+                            again.</p>
+                    </div>
+                </div>
+            </td>
+            <!-- Review 2 -->
+            <td>
+                <div>
+                    <h3>Smith</h3>
+                    <div class="stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Displays stars -->
+                        <hr color="#ccc">
+                        <p>Impressed by Flight Booking. Almost perfect - 4 stars for great service, just some minor
+                            in-flight entertainment room for improvement.
+                        </p>
+                    </div>
+                </div>
+            </td>
+            <!-- Review 3 -->
+            <tr>
+                <td>
+                    <div>
+                        <h3>David</h3>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Displays stars -->
+                            <hr color="#ccc">
+                            <p>Outstanding service and smooth booking process. The flight exceeded my expectations.
+                                Highly
+                                recommended!
+                            </p>
+                        </div>
+                    </div>
+
+                </td>
+                <!-- Review 4 -->
+                <td>
+                    <div>
+                        <h3>Johnson</h3>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Displays stars -->
+                            <hr color="#ccc">
+                            <p>Beyond amazed with [Your Flight Booking Company Name]. Top-notch service, 5 stars
+                                without
+                                hesitation. Can't wait for my next journey.
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+    </tbody>
+    <!-- User Review Form -->
+    <h1>Submit Your Review</h1>
+
+    <form action="#" method="get">
+        <label for="ReviewerName">Your Name:</label>
+        <input type="text" id="ReviewerName" name="name" required><br><br>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="select">Select</option>
+            <option value="5" selected>&#9733;&#9733;&#9733;&#9733;&#9733; (5 stars)
+            </option>
+            <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734; (4 stars)</option>
+            <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734; (3 stars)</option>
+            <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734; (2 stars)</option>
+            <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734; (1 star)</option>
+        </select><br><br>
+
+        <label for="flightNumber">Flight Number:</label>
+        <input type="text" id="flightNumber" name="flightNumber" required><br><br>
+
+        <label for="flightDate">Flight Date:</label>
+        <input type="date" id="flightDate" name="flightDate" required><br><br>
+
+        <label for="review"><u>Write Your Review:</u></label><br>
+        <textarea id="review" name="review" rows="10" cols="80" required></textarea><br><br>
+
+        <input type="submit" value="Submit Review">
+        <input type="reset" value="Reset">
+    </form>
+    <!-- End User Review Form -->
+
+    <!-- ABOUT US SECTION START -->
+    <h1><strong>About Us</strong></h1>
+    <h3><b>Welcome to Your Flight Booking</b></h3>
+
+    <header>
+        <em>
+            <p>Your gateway to seamless travel planning and exploration. Discover your next adventure <strong>with ease
+                    as
+                    you book flights to your dream destinations through our user-friendly platform.</strong> From the
+                moment you step
+                onboard, <strong> we're committed to providing you with top-notch service and a hassle-free
+                    booking.</strong>
+                experience.
+            </p>
+        </em>
+    </header>
+
+    <section id="destinations">
+        <h3>Explore Your Next Adventure</h3>
+        <p>But we're not just about booking flights – we're about igniting your wanderlust. Explore our carefully
+            curated list of popular destinations, from the iconic landmarks of <strong><em>Paris</em></strong> to the
+            vibrant streets
+            of
+            <strong><em>Tokyo.</em></strong> Get ready to embark on journeys that will create memories to last a
+            lifetime.
+        </p>
+    </section>
+    <!-- EnD ABOUT US SECTION -->
+
+    <section id="companion">
+        <h4>Your Travel Companion</h4>
+        <p>At Flight Booking, we're more than a booking website; we're your travel companion. Let's make every trip
+            an extraordinary one. Your journey begins here.</p>
+    </section>
+    <section id="PopDestination">
+
+        <h1> Our Popular Destination </h1>
+        <ul>
+            <li>
+                <h3><strong><em>Paris</em></strong></h3>
+            </li>
+        </ul>
+        <img src="images\Paris.jpg" alt="Paris" width="500" height="350">
+        &nbsp;
+        <div>
+        </div>
+        <ul>
+            <li><strong><em>Tokyo</em></strong></li>
+        </ul>
+        <img src="images\Tokyo.jpg" alt="Tokyo" width="500" height="350"><br>
+        &nbsp;<br>
+
+        <ul>
+            <li><strong><em>Dubai</em></strong></li>
+        </ul>
+        <img src="images\Dubai.jpg" alt="Dubai" width="500" height="350"><br>
+        &nbsp;<br>
+
+        <ul>
+            <li><strong><em>Delhi</em></strong></li>
+        </ul>
+        <img src="images\Delhi.jpg" alt="Delhi" width="500" height="350"><br>
+        &nbsp;<br>
+    </section>
+
+
+    <section id="FAQ's">
+        <h1>Frequently Asked Questions:</h1>
+        <!-- Question 1 -->
+        <ol>
+            <li> <strong> How do I book a flight on your website? </strong> </li>
+            <ol type="A">
+                <li>
+                    <p>Booking a flight is easy! Simply visit our homepage and use the flight search tool. Enter your
+                        departure and destination cities, travel dates, and the number of passengers. Our platform will
+                        display a list of available flights for you to choose from. Select your preferred flight,
+                        provide passenger details, and proceed to payment.</p>
+                </li>
+            </ol>
+            <!-- Q1 End -->
+
+
+            <li> <strong> What payment methods do you accept for flight bookings?</strong> </li>
+            <ol type="A">
+                <li>
+                    <p>We accept a variety of payment methods, including major credit cards (Visa, Mastercard, American
+                        Express), debit cards, and online payment platforms. You can choose the payment option that's
+                        most convenient for you during the checkout process.</p>
+                </li>
+            </ol>
+            <!-- Q2 End -->
+            <li> <strong> Can I cancel or change my flight after booking?</strong> </li>
+            <ol type="A">
+                <li>
+                    <p>Yes, you can! We understand that plans can change. Depending on the fare type you've selected,
+                        you may be able to make changes to your booking or cancel it. Keep in mind that change and
+                        cancellation policies vary based on the airline and fare rules. Make sure to review the terms
+                        and conditions associated with your booking or contact our customer support for assistance.</p>
+                </li>
+            </ol>
+            <!-- Q3 End -->
+            <li> <strong> How do I retrieve my e-ticket after booking?</strong> </li>
+            <ol type="A">
+                <li>
+                    <p>After completing your booking, you will receive a confirmation email containing your e-ticket
+                        details. You can also log in to your account on our website to view and print your e-ticket.
+                        Remember to bring a copy of your e-ticket and a valid ID to the airport for check-in.</p>
+                </li>
+            </ol>
+        </ol>
+        <!-- CONTACT US SECTION -->
+        <h1>Contact Us</h1>
+        Feel free to mail us <br>
+        <span> &#9993; </span>
+        <a href="mailto: info@example.com">info@flightbooking.com</a>
+
+        <!-- FAQ's FAQ's FAQ's FAQ's -->
+
+
+
+
+    </section>
+    <!-- copyright Footer -->
+    <hr>
+    <footer>
+        <p>&copy; 2023 flightbooking.html PVT LTD. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
